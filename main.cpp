@@ -32,5 +32,31 @@ bool isFirst = true;
 
 int main()
 {
-
+    setlocale(LC_ALL, "Russian");
+   int n, i, c, k;
+   int zapros;
+   printf("Определите ассортимент библиотеки\n");
+   cin >> n;
+   for (i = 0; i <= n - 1; i++)
+   {
+       if (isFirst) isFirst = false;
+       else
+       {
+           lastbook->next = new book;
+           lastbook = lastbook->next;
+       }
+      printf("Книга №%d\n",i + 1);
+      cout<<"\n"<<"UDK:";
+       cin >> lastbook->UDKnumber;
+       cout<<"\n"<<"Autor: ";
+       cin.ignore();
+    getline(&lastbook->autor[0],lim);
+      cout<<"\n"<<"BookName: ";
+      getline(&lastbook->bookname[0], lim);
+      cout<<"\n"<<"Year: ";
+       cin >> lastbook->year;
+       cout<<"\n"<<"Kolvo: "<<"\n";
+       cin >> lastbook->kolvo;
+       lastbook->next = NULL;
+   }
 }
