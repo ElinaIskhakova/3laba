@@ -96,11 +96,13 @@ int main()
            {
                if (zapros == t->UDKnumber)
                {
-                   t->kolvo = t->kolvo + 1;
-                   break;
+                   if (t->kolvo != 0)
+                   {
+                       t->kolvo = t->kolvo + 1;
+                       break;
+                   }
                }
                if (j == n - 1) cout<<"Такой книги нет в ассортименте\n";
-               t = t->next;
                j++;
            }
            break;
@@ -124,15 +126,11 @@ int main()
                                    printf("%d\n", t->kolvo);
                    break;
                }
-               else
-               {
-                   cout<<"Такой книги нет в ассортименте\n";
-               }
-
            }
+
+
             break;
        case 4:
-            printf("UDK | AUTOR | NAMEBOOK  | YEAR | COUNT\n");
            for (book* t = firstbook; t != NULL; t = t->next)
            {
             printf("%d      ", t->UDKnumber);
@@ -146,7 +144,7 @@ int main()
             printf("%d\n", t->kolvo);
            }
            break;
-
+}
        }
    }
-}
+
