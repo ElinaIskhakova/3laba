@@ -144,7 +144,6 @@ int main()
             cout << "    ";
             printf("%d  ", t->year);
             printf("%d\n", t->kolvo);
-           break;
            }
            break;
 
